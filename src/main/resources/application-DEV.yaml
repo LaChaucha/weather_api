@@ -1,0 +1,42 @@
+# server.servlet.contextPath: /api
+server:
+  servlet:
+    contextPath: "/api"
+  error:
+    include-message: always
+    include-binding-errors: never
+    include-stacktrace: on_param
+    include-exception: true
+# Encryptor config.
+jasypt:
+  encryptor:
+    algorithm: "PBEWITHHMACSHA512ANDAES_256"
+    key-obtention-iterations: "1000"
+    pool-size: "1"
+    salt-generator-classname: "org.jasypt.salt.RandomSaltGenerator"
+    iv-generator-classname: "org.jasypt.iv.RandomIvGenerator"
+    string-output-type: "base64"
+    provider-name: "SunJCE"
+
+# swagger-ui configuration.
+springdoc:
+  packagesToScan: "com.example.weather.health, com.example.weather.weather"
+  swagger-ui:
+    path: "dev/swagger-ui.html"
+    enabled: true
+
+openweathermap:
+  url: "https://api.openweathermap.org:443/data/2.5/onecall?lat={lat}&lon={lon}&exclude=minutely,hourly,daily,alerts&appid={appId}&units={units}&lang={lang}"
+  appId: "ENC(FQTzYm/yBO1VzmJeEC0jS7KaidzbGpvQLnUfaRxXPRvCG43xWgy0LaxQsZiHXiW3aflrCQgeGcQEYTL45lzE/Ny8VQuzQbszjHUcfuQV7B4=)"
+
+coordinates:
+  AR:
+    name: "Argentina"
+    lat: "-38.416097"
+    lon: "-63.616672"
+    type: "Country"
+  US:
+    name: "United State"
+    lat: "47.751076"
+    lon: "-120.740135"
+    type: "Country"

@@ -1,0 +1,32 @@
+#server.servlet.contextPath: /api
+server:
+  servlet:
+    contextPath: "/api"
+  error:
+    include-message: always
+    include-binding-errors: never
+    include-stacktrace: on_param
+    include-exception: true
+
+# swagger-ui configuration.
+springdoc:
+  packagesToScan: "com.example.weather.health, com.example.weather.weather"
+  swagger-ui:
+    path: "dev/swagger-ui.html"
+    enabled: true
+
+openweathermap:
+  url: "https://api.openweathermap.org:443/data/2.5/onecall?lat=-38.416097&lon=-63.616672&exclude=minutely,hourly,daily,alerts&appid=FAKE_TOKEN&units=METRIC&lang=ES"
+  appId: "FAKE_TOKEN"
+
+coordinates:
+  AR:
+    name: "Argentina"
+    lat: "-38.416097"
+    lon: "-63.616672"
+    type: "Country"
+  US:
+    name: "United State"
+    lat: "47.751076"
+    lon: "-120.740135"
+    type: "Country"
