@@ -9,6 +9,7 @@ The Weather API Wrapper is a Spring Boot application that provides a simplified 
 - [Technologies Used](#technologies-used)
 - [Getting Started](#getting-started)
 - [Running the Tests](#running-the-tests)
+- [Swagger UI](Swagger-UI)
 - [Contributing](Contributing)
 
 ---
@@ -49,6 +50,9 @@ The benefits of using Clean Architecture include increased maintainability, test
 
 1. Navigate to the project directory: `cd project-directory`
 2. Run the test suite: `mvn clean test`
+
+## Swagger UI
+Our documentation is available through Swagger UI. Swagger UI is an API visualization tool that allows us to interact with our API and view its documentation in real-time. You can access our API documentation in Swagger UI by navigating to the following URL: `http://localhost:8080/api/dev/swagger-ui/index.html#/`. Here you will find detailed information about the endpoints of our API, the parameters they accept, and the response data they return. We hope this documentation will be useful for you to better understand our API and how to use it.
 
 ## Contributing
 
